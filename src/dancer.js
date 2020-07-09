@@ -4,6 +4,8 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
   this.timeBetweenSteps = timeBetweenSteps;
+  this.top = top;
+  this.left = left;
   MakeDancer.prototype.setPosition.call(this,top, left);
   MakeDancer.prototype.step.call(this);
 };
@@ -19,6 +21,8 @@ MakeDancer.prototype.setPosition = function (top, left) {
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/
   //
+  this.top = top;
+  this.left = left;
   var styleSettings = {
     top: top,
     left: left

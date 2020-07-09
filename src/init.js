@@ -35,8 +35,26 @@ $(document).ready(function() {
     var top = 50;
     for (var i = 0; i < window.dancers.length; i++) {
       var dancer = window.dancers[i];
+      debugger;
       top += 50;
       dancer.setPosition(top, 500)
+    }
+  });
+
+  $('.interactButton').on('click', function(event) {
+    for (var i = 0; i < window.dancers.length; i++) { //dancer1 (x1, y1) dancer2 (x2, y2)
+      var dancer1 = window.dancers[i];
+      for (var j = i+ 1; j < window.dancers.length; j++) {
+        var dancer2 = window.dancers[j];
+        var topDistance = dancer1.top - dancer2.top;
+        var bottomDistance = dancer1.left - dancer2.left;
+        var totalDistance = Math.sqrt((topDistance * topDistance) + (bottomDistance * bottomDistance));
+        if (totalDistance < 200){
+          dancer1.$node.effect( "shake" );
+          dancer2.$node.effect( "shake" );
+        }
+
+      }
     }
   });
 });
