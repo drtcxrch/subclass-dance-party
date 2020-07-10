@@ -35,9 +35,8 @@ $(document).ready(function() {
     var top = 50;
     for (var i = 0; i < window.dancers.length; i++) {
       var dancer = window.dancers[i];
-      debugger;
       top += 50;
-      dancer.setPosition(top, 500)
+      dancer.setPosition(top, 500);
     }
   });
 

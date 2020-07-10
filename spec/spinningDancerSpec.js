@@ -12,12 +12,6 @@ describe('spinningDancer', function() {
     expect(spinningDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node spin', function() {
-    sinon.spy(spinningDancer.$node, 'animate');
-    spinningDancer.step();
-    expect(spinningDancer.$node.animate.called).to.be.true;
-  });
-
   describe('dance', function() {
     it('should call step at least once per second', function() {
       sinon.spy(spinningDancer, 'step');

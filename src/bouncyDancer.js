@@ -3,6 +3,7 @@ var BouncyDancer = function(top, left, timeBetweenSteps) {
   //var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
   //debugger;
   this.$node.addClass('bouncyDancer');
+  this.$node.append('<img src="bouncySmall.png">');
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 
@@ -22,5 +23,5 @@ BouncyDancer.prototype.step = function() {
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   //debugger;
-  this.$node.toggle( "bounce", { times: 3 }, "slow" );
+  this.$node.effect( "bounce", {times:3}, 300 );
 };

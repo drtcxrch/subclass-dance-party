@@ -3,6 +3,7 @@ var SpinningDancer = function (top, left, timeBetweenSteps) {
   //var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
   //debugger;
   this.$node.addClass('spinningDancer');
+  this.$node.append('<img src="spin.png">');
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 
