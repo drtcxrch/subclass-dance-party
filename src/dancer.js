@@ -31,3 +31,4 @@ makeDancer.prototype.setPosition = function(top, left) {
 
 makeDancer.step();
 makeDancer.setPosition(top, left);
+//
