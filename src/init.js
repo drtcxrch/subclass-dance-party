@@ -1,10 +1,10 @@
 $(document).ready(function() {
   window.dancers = [];
 
+
+
   // blinkyDancer functions...
   $('.addBlinkyDancerButton').on('click', function(event) {
-    // var dancerMakerFunctionName = $(this).data('class="addBlinkyDancerButton"');
-    // var dancerMakerFunction = window[dancerMakerFunctionName];
 
     let top = $('body').height() * Math.random();
     let left = $('body').width() * Math.random() * 2;
@@ -23,11 +23,10 @@ $(document).ready(function() {
     $('body').append(blinkyDancerInstance.$node);
   });
 
+
+
   // bmx functions...
   $('.addBmxButton').on('click', function(event) {
-    // var dancerMakerFunctionName = $(this).data('class="addBmxButton"');
-    // var dancerMakerFunction = window[dancerMakerFunctionName];
-    // console.log('clicked');
     let top = $('body').height() * Math.random();
     let left = $('body').width() * Math.random() * 2;
     let time = Math.random() * 1000;
@@ -44,10 +43,10 @@ $(document).ready(function() {
     $('body').append(bmxInstance.$node);
   });
 
+
+
   // generic functions...
   $('.addGenericButton').on('click', function(event) {
-    // var dancerMakerFunctionName = $(this).data('class="addBmxButton"');
-    // var dancerMakerFunction = window[dancerMakerFunctionName];
     let top = $('body').height() * Math.random();
     let left = $('body').width() * Math.random() * 2;
     let time = Math.random() * 1000;
@@ -64,5 +63,12 @@ $(document).ready(function() {
     var genericInstance = new makegenericDancer(top, left, time);
     $('body').append(genericInstance.$node);
   });
+
+  $('.lineupButton').on('click', function(event) {
+
+  });
 });
 
+
+// var dancerMakerFunctionName = $(this).data('class="addBlinkyDancerButton"');
+// var dancerMakerFunction = window[dancerMakerFunctionName];

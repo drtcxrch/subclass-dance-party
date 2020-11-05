@@ -17,7 +17,5 @@ makebmxDancer.prototype.step = function() {
   setTimeout(function() {
     that.step();
   }, that.timeBetweenSteps);
-
-  // this.$node.toggle('slow');
 };
 
