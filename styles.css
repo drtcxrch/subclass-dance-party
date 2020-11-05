@@ -94,3 +94,10 @@ img {
   -moz-animation:spin 4s linear infinite;
   animation:spin 4s linear infinite;
 }
+
+/* Mouse interaction */
+img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  background-color: yellow;
+}
