@@ -28,23 +28,18 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 
-
 .BlinkyDancer{
-  /* border:10px solid red; */
   border-radius:10px;
   position:absolute;
 
 }
 
-
 .BMXDancer{
-  /* border:30px solid blue; */
   border-radius:10px;
   position:absolute;
 }
 
 .GENERICDancer{
-  /* border:30px solid green; */
   border-radius:10px;
   position:absolute;
 }
