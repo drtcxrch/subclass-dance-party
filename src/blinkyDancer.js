@@ -5,13 +5,15 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+makeBlinkyDancer.prototype.prevStep = makeBlinkyDancer.prototype.step;
 
 makeBlinkyDancer.prototype.step = function() {
-  debugger;
-  makeDancer.prototype.step.call(this);
+  this.prevStep();
 
   this.$node.toggle();
 };
+
+
 
 
 // var makeBlinkyDancer = function(top, left, timeBetweenSteps) {

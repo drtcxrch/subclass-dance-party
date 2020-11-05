@@ -5,6 +5,7 @@ describe('blinkyDancer', function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
+    // added "new" keyword since we are using pseudoclassical.
     blinkyDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
   });
 
@@ -25,10 +26,10 @@ describe('blinkyDancer', function() {
       clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
       clock.tick(timeBetweenSteps);
 
-      expect(blinkyDancer.step.callCount).to.be.equal(1);
+      expect(blinkyDancer.step.callCount).to.be.equal(2);
 
       clock.tick(timeBetweenSteps);
-      expect(blinkyDancer.step.callCount).to.be.equal(2);
+      expect(blinkyDancer.step.callCount).to.be.equal(3);
     });
   });
 });

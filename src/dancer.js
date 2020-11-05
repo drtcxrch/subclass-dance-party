@@ -3,6 +3,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
 
   this.step();
+
   this.setPosition(top, left);
 };
 
@@ -10,6 +11,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 makeDancer.prototype.step = function() {
   var that = this;
 
+  // had to reset where "this" points to, setTimeout auto points to window object.
   setTimeout(function() {
     that.step();
   }, that.timeBetweenSteps);
@@ -22,6 +24,8 @@ makeDancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+
 
 // // Creates and returns a new dancer object that can step
 // var makeDancer = function(top, left, timeBetweenSteps) {
