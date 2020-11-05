@@ -3,7 +3,6 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="BlinkyDancer"><img src="/src/img/bike1.png"></span>');
 
   this.step();
-
   this.setPosition(top, left);
 };
 

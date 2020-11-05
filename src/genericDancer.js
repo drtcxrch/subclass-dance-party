@@ -1,7 +1,8 @@
 var makegenericDancer = function(top, left, timeBetween) {
   makebmxDancer.call(this, top, left, timeBetween);
-  this.$node = $('<span class="GENERICDancer"><img src="/src/img/bike3.png"></span>');
+  this.$node = $('<span class="GENERICDancer shift"><img src="/src/img/bike3.png"></span>');
   this.setPosition(top, left);
+
 };
 
 makegenericDancer.prototype = Object.create(makebmxDancer.prototype);
@@ -15,5 +16,7 @@ makegenericDancer.prototype.step = function() {
     that.step();
   }, that.timeBetweenSteps);
 
-  this.$node.toggle();
+  // this.$node.toggle();
 };
+
+
