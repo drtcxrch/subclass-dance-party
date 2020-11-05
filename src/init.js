@@ -7,19 +7,19 @@ $(document).ready(function() {
     // var dancerMakerFunction = window[dancerMakerFunctionName];
 
     let top = $('body').height() * Math.random();
-    let bottom = $('body').width() * Math.random();
+    let left = $('body').width() * Math.random() * 2;
     let time = Math.random() * 1000;
 
     let blinkyDancer = {
       name: 'blinkyDancer',
       top: top,
-      bottom: bottom,
+      left: left,
       time: time
     };
 
     window.dancers.push(blinkyDancer);
 
-    var blinkyDancerInstance = new makeBlinkyDancer(top, bottom, time);
+    var blinkyDancerInstance = new makeBlinkyDancer(top, left, time);
     $('body').append(blinkyDancerInstance.$node);
   });
 
@@ -29,18 +29,18 @@ $(document).ready(function() {
     // var dancerMakerFunction = window[dancerMakerFunctionName];
     // console.log('clicked');
     let top = $('body').height() * Math.random();
-    let bottom = $('body').width() * Math.random();
+    let left = $('body').width() * Math.random() * 2;
     let time = Math.random() * 1000;
 
     let bmxDancer = {
       name: 'bmxDancer',
       top: top,
-      bottom: bottom,
+      left: left,
       time: time
     };
 
     window.dancers.push(bmxDancer);
-    var bmxInstance = new makebmxDancer(top, bottom, time);
+    var bmxInstance = new makebmxDancer(top, left, time);
     $('body').append(bmxInstance.$node);
   });
 
@@ -49,19 +49,19 @@ $(document).ready(function() {
     // var dancerMakerFunctionName = $(this).data('class="addBmxButton"');
     // var dancerMakerFunction = window[dancerMakerFunctionName];
     let top = $('body').height() * Math.random();
-    let bottom = $('body').width() * Math.random();
+    let left = $('body').width() * Math.random() * 2;
     let time = Math.random() * 1000;
 
     let genericDancer = {
       name: 'genericDancer',
       top: top,
-      bottom: bottom,
+      left: left,
       time: time
     };
 
     window.dancers.push(genericDancer);
 
-    var genericInstance = new makegenericDancer(top, bottom, time);
+    var genericInstance = new makegenericDancer(top, left, time);
     $('body').append(genericInstance.$node);
   });
 });

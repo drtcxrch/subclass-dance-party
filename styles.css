@@ -100,4 +100,6 @@ img:hover {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   background-color: yellow;
+  height: 400px;
+  width: 400px;
 }
