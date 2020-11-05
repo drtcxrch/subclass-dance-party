@@ -33,6 +33,7 @@ body, a:link, a:visited, a:active{
   /* border:10px solid red; */
   border-radius:10px;
   position:absolute;
+
 }
 
 
@@ -48,3 +49,7 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+img {
+  height: 300px;
+  width: 300px;
+}
