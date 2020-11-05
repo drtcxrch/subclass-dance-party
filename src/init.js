@@ -64,6 +64,9 @@ $(document).ready(function() {
     $('body').append(genericInstance.$node);
   });
 
+
+
+  // line up function
   $('.lineupButton').on('click', function(event) {
 
   });
