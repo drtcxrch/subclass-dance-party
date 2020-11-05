@@ -1,13 +1,19 @@
-var genericDancer = function(top, left, timeBetween) {
-  genericDancer.call(this, top, left, timeBetween);
+var makegenericDancer = function(top, left, timeBetween) {
+  makebmxDancer.call(this, top, left, timeBetween);
+  this.$node = $('<span class="GENERICDancer"><img src="/src/img/bike3.png"></span>');
+  this.setPosition(top, left);
 };
 
-genericDancer.protottype = Object.create(bmxDancer.prototype);
-genericDancer.prototype.constructor = genericDancer;
-genericDancer.protottype.prevStep = genericDancer.protottype.step;
+makegenericDancer.prototype = Object.create(makebmxDancer.prototype);
+makegenericDancer.prototype.constructor = makegenericDancer;
+makegenericDancer.prototype.prevStep = makegenericDancer.prototype.step;
 
-genericDancer.protottype.step = function() {
-  this.prevStep();
+makegenericDancer.prototype.step = function() {
+  var that = this;
+
+  setTimeout(function() {
+    that.step();
+  }, that.timeBetweenSteps);
 
   this.$node.toggle();
 };
