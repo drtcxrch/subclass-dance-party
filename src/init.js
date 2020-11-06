@@ -6,21 +6,15 @@ $(document).ready(function() {
   // blinkyDancer functions...
   $('.addBlinkyDancerButton').on('click', function(event) {
 
-    let top = $('body').height() * Math.random() / 2;
-    let left = $('body').width() * Math.random() * 2;
+    let top = $('body').height() * Math.random();
+    let left = $('body').width() * Math.random();
     let time = Math.random() * 1000;
-
-    let blinkyDancer = {
-      name: 'blinkyDancer',
-      top: top,
-      left: left,
-      time: time
-    };
-
-    window.dancers.push(blinkyDancer);
 
     var blinkyDancerInstance = new makeBlinkyDancer(top, left, time);
     $('body').append(blinkyDancerInstance.$node);
+    window.dancers.push(blinkyDancerInstance);
+    console.log(window.dancers);
+
   });
 
 
@@ -28,19 +22,13 @@ $(document).ready(function() {
   // bmx functions...
   $('.addBmxButton').on('click', function(event) {
     let top = $('body').height() * Math.random();
-    let left = $('body').width() * Math.random() * 2;
+    let left = $('body').width() * Math.random();
     let time = Math.random() * 1000;
 
-    let bmxDancer = {
-      name: 'bmxDancer',
-      top: top,
-      left: left,
-      time: time
-    };
-
-    window.dancers.push(bmxDancer);
     var bmxInstance = new makebmxDancer(top, left, time);
     $('body').append(bmxInstance.$node);
+    window.dancers.push(bmxInstance);
+
   });
 
 
@@ -48,26 +36,33 @@ $(document).ready(function() {
   // generic functions...
   $('.addGenericButton').on('click', function(event) {
     let top = $('body').height() * Math.random();
-    let left = $('body').width() * Math.random() * 2;
+    let left = $('body').width() * Math.random();
     let time = Math.random() * 1000;
-
-    let genericDancer = {
-      name: 'genericDancer',
-      top: top,
-      left: left,
-      time: time
-    };
-
-    window.dancers.push(genericDancer);
 
     var genericInstance = new makegenericDancer(top, left, time);
     $('body').append(genericInstance.$node);
+    window.dancers.push(genericInstance);
   });
-
 
 
   // line up function
   $('.lineupButton').on('click', function(event) {
+    let shiftLeft = {
+      left: 100
+    };
 
+    let shiftRight = {
+      left: 1350
+    };
+
+    let { dancers } = window;
+    for (let i = 0; i < dancers.length; i++) {
+
+      if (i % 2 === 0) {
+        dancers[i].$node.css(shiftLeft);
+      } else {
+        dancers[i].$node.css(shiftRight);
+      }
+    }
   });
 });
