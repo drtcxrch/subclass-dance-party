@@ -1,6 +1,6 @@
 var makegenericDancer = function(top, left, timeBetween) {
   makebmxDancer.call(this, top, left, timeBetween);
-  this.$node = $('<span class="GENERICDancer shift"><img src="/src/img/bike3.png"></span>');
+  this.$node = $('<span class="GENERICDancer shift burst-12"><img src="/src/img/bike3.png"></span>');
   this.setPosition(top, left);
 };
 
