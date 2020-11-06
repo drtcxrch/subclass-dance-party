@@ -6,7 +6,7 @@ $(document).ready(function() {
   // blinkyDancer functions...
   $('.addBlinkyDancerButton').on('click', function(event) {
 
-    let top = $('body').height() * Math.random();
+    let top = $('body').height() * Math.random() / 2;
     let left = $('body').width() * Math.random() * 2;
     let time = Math.random() * 1000;
 
@@ -71,7 +71,3 @@ $(document).ready(function() {
 
   });
 });
-
-
-// var dancerMakerFunctionName = $(this).data('class="addBlinkyDancerButton"');
-// var dancerMakerFunction = window[dancerMakerFunctionName];

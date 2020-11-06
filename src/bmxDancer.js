@@ -9,7 +9,6 @@ var makebmxDancer = function(top, left, timeBetween) {
 
 makebmxDancer.prototype = Object.create(makeBlinkyDancer.prototype);
 makebmxDancer.prototype.constructor = makebmxDancer;
-makebmxDancer.prototype.prevStep = makebmxDancer.prototype.step;
 
 makebmxDancer.prototype.step = function() {
   var that = this;
