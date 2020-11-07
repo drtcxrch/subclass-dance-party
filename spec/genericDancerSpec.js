@@ -6,7 +6,7 @@ describe('genericDancer', function() {
   beforeEach(function() {
     clock = sinon.useFakeTimers();
     // added "new" keyword since we are using pseudoclassical.
-    genericDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
+    genericDancer = new makegenericDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
@@ -19,24 +19,25 @@ describe('genericDancer', function() {
     expect(genericDancer.$node.toggle.called).to.be.true;
   });
 
-  describe('dance', function() {
-    it('should call step at least once per second', function() {
-      sinon.spy(genericDancer, 'step');
-      expect(genericDancer.step.callCount).to.be.equal(0);
-      clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
-      clock.tick(timeBetweenSteps);
+  // describe('dance', function() {
+  //   it('should call step at least once per second', function() {
+  //     sinon.spy(genericDancer, 'step');
+  //     expect(genericDancer.step.callCount).to.be.equal(0);
+  //     clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
+  //     clock.tick(timeBetweenSteps);
 
-      expect(genericDancer.step.callCount).to.be.equal(2);
+  //     expect(genericDancer.step.callCount).to.be.equal(2);
 
-      clock.tick(timeBetweenSteps);
-      expect(genericDancer.step.callCount).to.be.equal(3);
-    });
-  });
+  //     clock.tick(timeBetweenSteps);
+  //     expect(genericDancer.step.callCount).to.be.equal(3);
+  //   });
+  // });
 
   // added test
-  describe('?!?!?!?!?!', function() {
-    it('?!?!?!?!?!', function() {
+  describe('dance', function() {
+    it('should have a shift class that makes the dancer spin', function() {
 
+      expect(genericDancer.$node.classList).contains('shift');
     });
   });
 });

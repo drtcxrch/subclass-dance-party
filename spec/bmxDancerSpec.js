@@ -6,17 +6,11 @@ describe('bmxDancer', function() {
   beforeEach(function() {
     clock = sinon.useFakeTimers();
     // added "new" keyword since we are using pseudoclassical.
-    bmxDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
+    bmxDancer = new makebmxDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
     expect(bmxDancer.$node).to.be.an.instanceof(jQuery);
-  });
-
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(bmxDancer.$node, 'toggle');
-    bmxDancer.step();
-    expect(bmxDancer.$node.toggle.called).to.be.true;
   });
 
   describe('dance', function() {
@@ -34,9 +28,11 @@ describe('bmxDancer', function() {
   });
 
   // added test
-  describe('', function() {
-    it('?!?!?!', function() {
+  describe('dance', function() {
+    it('should have a bounce class that makes the dancer spin', function() {
+      console.log(bmxDancer.$node[0].classList);
 
+      expect(bmxDancer.$node[0].classList).to.contains('bounce');
     });
   });
 });
