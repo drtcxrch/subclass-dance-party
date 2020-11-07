@@ -34,8 +34,8 @@ describe('bmxDancer', function() {
   });
 
   // added test
-  describe('?!?!?!?!?!', function() {
-    it('?!?!?!?!?!', function() {
+  describe('', function() {
+    it('?!?!?!', function() {
 
     });
   });

@@ -6,7 +6,7 @@ $(document).ready(function() {
   // blinkyDancer functions...
   $('.addBlinkyDancerButton').on('click', function(event) {
 
-    let top = $('body').height() * Math.random();
+    let top = $('body').height() * Math.random() / 2;
     let left = $('body').width() * Math.random();
     let time = Math.random() * 1000;
 
@@ -14,28 +14,26 @@ $(document).ready(function() {
     $('body').append(blinkyDancerInstance.$node);
     window.dancers.push(blinkyDancerInstance);
     console.log(window.dancers);
-
   });
 
 
 
   // bmx functions...
   $('.addBmxButton').on('click', function(event) {
-    let top = $('body').height() * Math.random();
+    let top = $('body').height() * Math.random() / 2;
     let left = $('body').width() * Math.random();
     let time = Math.random() * 1000;
 
     var bmxInstance = new makebmxDancer(top, left, time);
     $('body').append(bmxInstance.$node);
     window.dancers.push(bmxInstance);
-
   });
 
 
 
   // generic functions...
   $('.addGenericButton').on('click', function(event) {
-    let top = $('body').height() * Math.random();
+    let top = $('body').height() * Math.random() / 2;
     let left = $('body').width() * Math.random();
     let time = Math.random() * 1000;
 
@@ -99,5 +97,4 @@ $(document).ready(function() {
       }
     }
   });
-
 });
