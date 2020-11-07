@@ -30,9 +30,7 @@ describe('bmxDancer', function() {
   // added test
   describe('dance', function() {
     it('should have a bounce class that makes the dancer spin', function() {
-      console.log(bmxDancer.$node[0].classList);
-
-      expect(bmxDancer.$node[0].classList).to.contains('bounce');
+      expect(bmxDancer.$node[0].classList.value).to.include('bounce');
     });
   });
 });
